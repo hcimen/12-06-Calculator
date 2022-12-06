@@ -3,13 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="icon" type="image/x-icon" href="airbnb-icon.png">
-  <title> AirBnB - Deliverable 8 </title>
-<link rel="icon" href="calculator.png">
+  <link rel="icon" type="image/x-icon" href="calculator.png">
+  <title> Calculator Project </title>
+
+  <script src="app.js" > </script>
 </head>
 
 <body>
-     
+  <div>
+    <input id="text" type="text" placeholder="type text here" class="bg-[#D5E7E7] text-[#3C4A4B] text-6xl text-right border-2 border-solid border-[#389F9E] w-full h-32 p-6"> 
+  </div>
+
+  <div class="grid grid-cols-4 grid-rows-6 bg-[#D5E3FE] text-[#3C4A4B] text-6xl justify-center justify-items-center border-2 border-solid border-[#389F9E] h-screen">  
+    <button class="border border-[#389F9E] w-full text-center" onclick = "off()"> On/Off </button>
+    <button class="border border-[#389F9E] w-full text-center"> AC </button>
+    <button class="border border-[#389F9E] w-full text-center"> % </button>
+    <button class="border border-[#389F9E] w-full text-center"> ÷ </button>    
+    <button class="border border-[#389F9E] w-full text-center" onclick = "myfunctiondisplay(7)"> 7 </button>
+    <button class="border border-[#389F9E] w-full text-center" onclick = "myfunctiondisplay(8)"> 8 </button>    
+    <button class="border border-[#389F9E] w-full text-center" onclick = "myfunctiondisplay(9)"> 9 </button>
+    <button class="border border-[#389F9E] w-full text-center"> x </button>
+    <button class="border border-[#389F9E] w-full text-center" onclick = "myfunctiondisplay(4)"> 4 </button>    
+    <button class="border border-[#389F9E] w-full text-center" onclick = "myfunctiondisplay(5)"> 5 </button>
+    <button class="border border-[#389F9E] w-full text-center" onclick = "myfunctiondisplay(6)"> 6 </button>  
+    <button class="border border-[#389F9E] w-full text-center"> - </button>
+    <button class="border border-[#389F9E] w-full text-center" onclick= "myfunctiondisplay(1)"> 1 </button>
+    <button class="border border-[#389F9E] w-full text-center" onclick= "myfunctiondisplay(2)"> 2 </button>    
+    <button class="border border-[#389F9E] w-full text-center" onclick = "myfunctiondisplay(3)"> 3 </button>
+    <button class="border border-[#389F9E] w-full text-center"> + </button>    
+    <button class="border border-[#389F9E] w-full text-center" onclick = "myfunctiondisplay(0) " > 0 </button>
+    <button class="border border-[#389F9E] w-full text-center" onclick = "myfunctiondisplay(.) " > . </button>    
+    <button class="col-span-2 border border-[#389F9E] w-full text-center"> = </button>
+  </div>
+
+
+
+
+</div>
+
+
+
 </body>
 
 </html>

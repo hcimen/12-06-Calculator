@@ -1,27 +1,12 @@
-<script>
-    
-var val=document.getElementById("text");
-
-function myfunctiondisplay(v){
-val.value+=v;
-}
-
+function my1(x){
+    z.value+=x;
+    }
 
 function cls(){
-val.value="";
-}
+    z.value="";}
 
 function exe(){
-val.value=eval(val.value);
-}
-
-
-function cancel(){
-val.value=val.value.substr(0,val.value.length-1);
-}
-
-function off(){
-document.getElementById('text').style.display='none';
-}
-
-</script>
+    let z = document.getElementById("text").value
+    let y = eval(z)
+    document.getElementById("text").value= y
+    }

@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/x-icon" href="calculator.png">
+  <title> Calculator Project </title>
+</head>
+
+
+<body>
+<div class="h-screen">
+  <div>
+    <input id="text" type="text" placeholder="0" class="bg-[#D5E7E7] text-[#3C4A4B] text-6xl text-right border-2 border-solid border-[#389F9E] w-full h-1/6 p-6">
+  </div>
+
+  <div class="grid grid-cols-6 grid-rows-5 bg-[#D5E3FE] text-[#3C4A4B] text-6xl justify-center border-2 border-solid border-[#389F9E] h-5/6">
+    <button class="border border-[#389F9E] w-full text-center" onclick="cls()"> CE </button>
+    <button class="border border-[#389F9E] w-full text-center" onclick="cancel()"> ⌫ </button>
+    <button class="border border-[#389F9E] w-full text-center" onclick="percent()"> % </button>
+    <button class="border border-[#389F9E] w-full text-center" onclick="my1('/')"> ÷ </button>
+    <button class="border border-[#389F9E] w-full text-center" onclick="sqrt()"> √ </button>
+    <button class="border border-[#389F9E] w-full text-center" onclick="minus()"> ± </button>     
+    <button class="border border-[#389F9E] w-full text-center" onclick="my1(7)"> 7 </button>
+    <button class="border border-[#389F9E] w-full text-center" onclick="my1(8)"> 8 </button>    
+    <button class="border border-[#389F9E] w-full text-center" onclick="my1(9)"> 9 </button>
+    <button class="border border-[#389F9E] w-full text-center" onclick="my1('*')"> x </button>
+    <button class="border border-[#389F9E] w-full text-center" onclick="exponent('^')"> a^2 </button>
+    <button class="border border-[#389F9E] w-full text-center" onclick="my1('**')"> a^b </button>
+    <button class="border border-[#389F9E] w-full text-center" onclick="my1(4)"> 4 </button>    
+    <button class="border border-[#389F9E] w-full text-center" onclick="my1(5)"> 5 </button>
+    <button class="border border-[#389F9E] w-full text-center" onclick="my1(6)"> 6 </button>  
+    <button class="border border-[#389F9E] w-full text-center" onclick="my1('-')"> - </button>
+    <button class="border border-[#389F9E] w-full text-center" onclick="pi('π')"> π </button>
+    <button class="border border-[#389F9E] w-full text-center" onclick="fact()"> a! </button>
+    <button class="border border-[#389F9E] w-full text-center" onclick="my1(1)"> 1 </button>
+    <button class="border border-[#389F9E] w-full text-center" onclick="my1(2)"> 2 </button>    
+    <button class="border border-[#389F9E] w-full text-center" onclick="my1(3)"> 3 </button>
+    <button class="border border-[#389F9E] w-full text-center" onclick="my1('+')"> + </button> 
+    <button class="border border-[#389F9E] w-full text-center" onclick="permille()"> ‰ </button> 
+    <button class="border border-[#389F9E] w-full text-center" onclick="abs()"> | a | </button>       
+    <button class="border border-[#389F9E] w-full text-center" onclick = "my1(0)" > 0 </button>
+    <button class="border border-[#389F9E] w-full text-center" onclick = "my1('.')" > . </button>    
+    <button class="border border-[#389F9E] w-full text-center col-span-4" onclick="exe()"> = </button>
+  </div>
+</div>
+  <script>
+
+    let x=document.getElementById("text");
+    
+    function my1(v){
+    x.value+=v;
+    }
+    
+    function exe(){
+    x.value=eval(x.value);
+    }
+
+    function cls(){
+    x.value="";
+    }
+
+    function cancel(){
+    x.value=x.value.substr(0,x.value.length-1);
+    }
+
+    function percent(){
+    x.value = eval(x.value)  * 1/100 ;
+    }
+
+    function exponent(){
+    x.value=eval(x.value);
+    x.value = eval(x.value * x.value);
+    }
+
+    function pi(){
+    var π = 3.1415;
+    x.value+=π;
+    }
+
+    function permille(){
+    x.value = eval(x.value)  * 1/1000 ;
+    }
+
+    function sqrt(){
+    x.value = eval(Math.sqrt(x.value)) ;
+    }
+
+    function minus(){
+    x.value = eval(x.value)  * -1 ;
+  }
+  
+  function abs(){
+    x.value = eval(Math.abs(x.value)) ;
+  }
+
+  function fact(x){  
+  let answer = 1;
+  if (x === 0 || x === 1){
+    return answer;
+  }else{
+    for(var i = x; i >= 1; i--){
+      answer = answer * i;
+    }
+    return answer;
+    x.value = answer ;
+  }  
+}
+
+
+</script>
+
+
+</body>
+
+</html>

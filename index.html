@@ -18,7 +18,7 @@
   <div class="grid grid-cols-4 grid-rows-5 bg-[#D5E3FE] text-[#3C4A4B] text-6xl justify-center border-2 border-solid border-[#389F9E] h-5/6">
     <button class="border border-[#389F9E] w-full text-center" onclick="cls()"> CE </button>
     <button class="border border-[#389F9E] w-full text-center" onclick="cancel()"> ⌫ </button>
-    <button class="border border-[#389F9E] w-full text-center" onclick="my1('%')"> % </button>
+    <button class="border border-[#389F9E] w-full text-center" onclick="my2()"> % </button>
     <button class="border border-[#389F9E] w-full text-center" onclick="my1('/')"> ÷ </button>    
     <button class="border border-[#389F9E] w-full text-center" onclick="my1(7)"> 7 </button>
     <button class="border border-[#389F9E] w-full text-center" onclick="my1(8)"> 8 </button>    
@@ -55,6 +55,10 @@
 
     function cancel(){
     x.value=x.value.substr(0,x.value.length-1);
+    }
+
+    function my2(){
+    x.value = eval(x.value)  * 1/100 ;
     }
   
 </script>
